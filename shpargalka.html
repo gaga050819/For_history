@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Міжнародні договори 1921–1929</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#f5f0e8;
+  --card:#fffdf7;
+  --border:#e2d9c5;
+  --text:#2c2416;
+  --muted:#8a7355;
+  --light:#f0e9d8;
+  --accent:#c4a97d;
+  --shadow:rgba(44,36,22,.06);
+  --shadow-hover:rgba(44,36,22,.12);
+  --note-bg:#faf6ed;
+}
+[data-theme="dark"]{
+  --bg:#181512;
+  --card:#221d18;
+  --border:#3a3228;
+  --text:#ede4d4;
+  --muted:#a69580;
+  --light:#2c251f;
+  --accent:#d1b68a;
+  --shadow:rgba(0,0,0,.25);
+  --shadow-hover:rgba(0,0,0,.45);
+  --note-bg:#2a231b;
+}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  padding:28px 18px 60px;
+  min-height:100vh;
+  transition:background .25s,color .25s;
+}
+.page{max-width:960px;margin:0 auto}
+
+h1{
+  font-family:'Cormorant Garamond',serif;
+  font-size:2.4rem;
+  font-weight:700;
+  text-align:center;
+  line-height:1.2;
+  margin-bottom:4px;
+}
+[data-theme="dark"] h1,
+[data-theme="dark"] .card-title,
+[data-theme="dark"] ul.facts li b,
+[data-theme="dark"] .tl-name,
+[data-theme="dark"] .modal-title{
+  color:#f6eee2;
+}
+.sub{
+  text-align:center;
+  font-size:11px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:14px;
+}
+hr.div{
+  border:none;
+  border-top:1px solid var(--border);
+  margin:0 auto 16px;
+  width:200px;
+}
+
+.top-bar{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+.top-btn{
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:.8px;
+  padding:7px 15px;
+  border-radius:24px;
+  border:1px solid var(--border);
+  background:var(--card);
+  color:var(--muted);
+  cursor:pointer;
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  transition:all .2s;
+  box-shadow:0 1px 4px var(--shadow);
+}
+.top-btn svg{
+  flex-shrink:0;
+  transition:stroke .2s;
+}
+.top-btn:hover{
+  border-color:var(--accent);
+  color:var(--text);
+  transform:translateY(-1px);
+}
+
+.search-wrap{
+  display:flex;
+  justify-content:center;
+  margin-bottom:20px;
+}
+.search{
+  width:100%;
+  max-width:380px;
+  padding:9px 16px 9px 40px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:30px;
+  font-family:'Inter',sans-serif;
+  font-size:13px;
+  color:var(--text);
+  outline:none;
+  transition:border-color .2s,box-shadow .2s;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 24 24'%3E%3Ccircle cx='11' cy='11' r='7' stroke='%238a7355' stroke-width='2'/%3E%3Cpath d='m16.5 16.5 4 4' stroke='%238a7355' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat:no-repeat;
+  background-position:14px center;
+  box-shadow:0 2px 8px var(--shadow);
+}
+[data-theme="dark"] .search{
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' viewBox='0 0 24 24'%3E%3Ccircle cx='11' cy='11' r='7' stroke='%23a69580' stroke-width='2'/%3E%3Cpath d='m16.5 16.5 4 4' stroke='%23a69580' stroke-width='2' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+.search:focus{
+  border-color:var(--accent);
+  box-shadow:0 0 0 3px rgba(196,169,125,.2);
+}
+.search::placeholder{color:var(--muted)}
+
+.tabs{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin-bottom:20px;
+  flex-wrap:wrap;
+}
+.tab{
+  font-family:'Inter',sans-serif;
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  padding:7px 16px;
+  border-radius:30px;
+  border:1px solid var(--border);
+  background:var(--card);
+  color:var(--muted);
+  cursor:pointer;
+  transition:all .2s;
+  user-select:none;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+.tab:hover{
+  border-color:var(--accent);
+  color:var(--text);
+}
+.tab.active{
+  background:var(--accent);
+  color:#fff;
+  border-color:var(--accent);
+  box-shadow:0 2px 10px rgba(196,169,125,.35);
+}
+.tab.active svg polygon{
+  fill:#fff;
+  stroke:#fff;
+}
+.badge-count{
+  display:inline-block;
+  background:rgba(0,0,0,.15);
+  font-size:10px;
+  padding:1px 6px;
+  border-radius:10px;
+}
+.tab.active .badge-count{
+  background:rgba(255,255,255,.3);
+  color:#fff;
+}
+
+.view-toggle{
+  display:flex;
+  justify-content:center;
+  gap:8px;
+  margin-bottom:14px;
+}
+.vbtn{
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  padding:6px 14px;
+  border-radius:20px;
+  border:1px solid var(--border);
+  background:var(--card);
+  color:var(--muted);
+  cursor:pointer;
+  transition:all .2s;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+}
+.vbtn svg{flex-shrink:0}
+.vbtn.active{
+  background:var(--light);
+  border-color:var(--accent);
+  color:var(--text);
+}
+
+.ctrl-bar{
+  display:flex;
+  justify-content:flex-end;
+  gap:8px;
+  margin-bottom:12px;
+}
+.ctrl-btn{
+  font-size:11px;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  padding:5px 14px;
+  border-radius:20px;
+  border:1px solid var(--border);
+  background:var(--card);
+  color:var(--muted);
+  cursor:pointer;
+  transition:all .2s;
+}
+.ctrl-btn:hover{
+  border-color:var(--accent);
+  color:var(--text);
+}
+
+.sec-label{
+  font-size:10px;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin:10px 0 12px;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+.sec-label::before,.sec-label::after{
+  content:'';
+  flex:1;
+  height:1px;
+  background:var(--border);
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+  margin-bottom:8px;
+}
+.grid.two{grid-template-columns:repeat(2,1fr)}
+.span2{grid-column:span 2}
+.span3{grid-column:1/-1}
+
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:18px 20px;
+  position:relative;
+  box-shadow:0 2px 12px var(--shadow);
+  transition:box-shadow .25s,transform .25s,border-color .25s,background .25s;
+}
+.card:hover{
+  box-shadow:0 6px 24px var(--shadow-hover);
+  transform:translateY(-2px);
+  border-color:var(--accent);
+}
+.card::before{
+  content:'';
+  position:absolute;
+  top:0;
+  left:0;
+  right:0;
+  height:3px;
+  border-radius:14px 14px 0 0;
+  background:var(--c,var(--accent));
+}
+.card.hidden{display:none!important}
+
+.card-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:8px;
+  cursor:pointer;
+}
+.card-title-wrap{flex:1}
+.card-year{
+  font-size:10px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--c,var(--accent));
+  font-weight:700;
+  margin-bottom:3px;
+}
+.card-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.15rem;
+  font-weight:700;
+  line-height:1.25;
+}
+
+.card-actions{
+  display:flex;
+  align-items:center;
+  gap:4px;
+}
+.action-btn{
+  background:transparent;
+  border:none;
+  color:var(--muted);
+  cursor:pointer;
+  padding:5px 6px;
+  border-radius:6px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:all .2s;
+}
+.action-btn svg{
+  transition:all .2s;
+}
+.action-btn:hover{
+  background:var(--light);
+  color:var(--text);
+}
+.star-btn svg{
+  fill:transparent;
+  stroke:var(--muted);
+}
+.star-btn.starred svg{
+  fill:#e0a025;
+  stroke:#e0a025;
+}
+.toggle-icon{
+  font-size:18px;
+  color:var(--muted);
+  transition:transform .3s;
+  flex-shrink:0;
+  line-height:1;
+  user-select:none;
+  padding:4px;
+}
+.card.open .toggle-icon{transform:rotate(45deg)}
+
+.card-preview{
+  font-size:12px;
+  color:var(--muted);
+  margin-top:6px;
+  line-height:1.4;
+  font-style:italic;
+  cursor:pointer;
+}
+.card.open .card-preview{display:none}
+
+.card-body{
+  overflow:hidden;
+  max-height:0;
+  transition:max-height .4s cubic-bezier(.4,0,.2,1),opacity .3s;
+  opacity:0;
+  margin-top:0;
+}
+.card.open .card-body{
+  max-height:850px;
+  opacity:1;
+  margin-top:10px;
+}
+
+.date-tag{
+  display:inline-block;
+  font-size:10px;
+  font-weight:600;
+  color:var(--muted);
+  letter-spacing:.5px;
+  background:var(--light);
+  border-radius:4px;
+  padding:2px 8px;
+  margin-bottom:10px;
+  border:1px solid var(--border);
+}
+
+ul.facts{
+  list-style:none;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+ul.facts li{
+  font-size:12.5px;
+  line-height:1.45;
+  display:flex;
+  gap:8px;
+  align-items:flex-start;
+}
+ul.facts li::before{
+  content:"—";
+  opacity:.4;
+  flex-shrink:0;
+}
+.note{
+  font-family:'Cormorant Garamond',serif;
+  font-style:italic;
+  font-size:13px;
+  color:var(--muted);
+  line-height:1.55;
+  border-left:2px solid var(--c,var(--accent));
+  padding:8px 12px;
+  margin-top:12px;
+  background:var(--note-bg);
+  border-radius:0 6px 6px 0;
+}
+.chips{
+  display:flex;
+  flex-wrap:wrap;
+  gap:6px;
+  margin-top:10px;
+}
+.chip{
+  font-size:11px;
+  color:var(--text);
+  background:var(--light);
+  border:1px solid var(--border);
+  border-radius:6px;
+  padding:3px 8px;
+  display:inline-flex;
+  align-items:center;
+  gap:6px;
+  line-height:1;
+}
+.flag-icon{
+  flex-shrink:0;
+  border-radius:2px;
+  vertical-align:middle;
+  box-shadow:0 0 1px rgba(0,0,0,.25);
+}
+.two-col{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin-top:4px;
+}
+.mini-block{
+  background:var(--note-bg);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:12px;
+}
+.mini-title{
+  font-size:10px;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:var(--muted);
+  margin-bottom:8px;
+  font-weight:700;
+}
+
+.sig{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  margin-top:12px;
+}
+.sig-label{
+  font-size:10px;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  color:var(--muted);
+  white-space:nowrap;
+}
+.sig-bar{
+  flex:1;
+  height:4px;
+  background:var(--light);
+  border-radius:2px;
+  overflow:hidden;
+}
+.sig-fill{
+  height:100%;
+  border-radius:2px;
+  background:var(--c,var(--accent));
+  width:0;
+  transition:width .8s cubic-bezier(.4,0,.2,1);
+}
+.sig-n{
+  font-size:10px;
+  color:var(--muted);
+  font-weight:600;
+  min-width:28px;
+  text-align:right;
+}
+
+.timeline{
+  display:none;
+  flex-direction:column;
+  gap:0;
+  padding:0 0 0 28px;
+  border-left:2px solid var(--border);
+  margin:10px 0 0 16px;
+}
+.timeline.show{display:flex}
+.tl-item{
+  position:relative;
+  padding:0 0 24px 24px;
+}
+.tl-item::before{
+  content:'';
+  position:absolute;
+  left:-7px;
+  top:4px;
+  width:12px;
+  height:12px;
+  border-radius:50%;
+  background:var(--c,var(--accent));
+  border:2px solid var(--bg);
+}
+.tl-year{
+  font-size:10px;
+  font-weight:700;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--c,var(--accent));
+  margin-bottom:2px;
+}
+.tl-name{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.05rem;
+  font-weight:700;
+  margin-bottom:4px;
+}
+.tl-desc{
+  font-size:12px;
+  color:var(--muted);
+  line-height:1.5;
+}
+
+.no-results{
+  text-align:center;
+  color:var(--muted);
+  font-style:italic;
+  font-size:13px;
+  padding:24px;
+  display:none;
+}
+.no-results svg{
+  vertical-align:middle;
+  margin-left:4px;
+}
+
+.modal-overlay{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.5);
+  backdrop-filter:blur(3px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:1000;
+  padding:16px;
+}
+.modal-overlay.open{display:flex}
+.modal{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  width:100%;
+  max-width:540px;
+  max-height:85vh;
+  overflow-y:auto;
+  box-shadow:0 12px 36px var(--shadow-hover);
+  padding:24px;
+}
+.modal-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:16px;
+  border-bottom:1px solid var(--border);
+  padding-bottom:12px;
+}
+.modal-title{
+  font-family:'Cormorant Garamond',serif;
+  font-size:1.35rem;
+  font-weight:700;
+}
+.modal-close{
+  background:transparent;
+  border:none;
+  font-size:22px;
+  color:var(--muted);
+  cursor:pointer;
+  line-height:1;
+  padding:4px;
+}
+.modal-close:hover{color:var(--text)}
+.modal-content{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+.glossary-item{
+  background:var(--note-bg);
+  border:1px solid var(--border);
+  border-radius:8px;
+  padding:12px 14px;
+}
+.glossary-term{
+  font-size:13px;
+  font-weight:700;
+  color:var(--accent);
+  margin-bottom:4px;
+}
+.glossary-def{
+  font-size:12px;
+  line-height:1.5;
+}
+
+.toast{
+  position:fixed;
+  bottom:24px;
+  left:50%;
+  transform:translateX(-50%) translateY(20px);
+  background:var(--card);
+  color:var(--text);
+  border:1px solid var(--border);
+  box-shadow:0 6px 20px var(--shadow-hover);
+  padding:8px 18px;
+  border-radius:30px;
+  font-size:12px;
+  font-weight:500;
+  opacity:0;
+  pointer-events:none;
+  transition:all .25s ease;
+  z-index:2000;
+}
+.toast.show{
+  opacity:1;
+  transform:translateX(-50%) translateY(0);
+}
+
+@media(max-width:640px){
+  .grid,.grid.two{grid-template-columns:1fr}
+  .span2,.span3{grid-column:1}
+  .two-col{grid-template-columns:1fr}
+  h1{font-size:1.8rem}
+  .tabs{gap:5px}
+  .tab{font-size:10px;padding:6px 12px}
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+  <h1>Міжнародні договори<br>1921–1929 рр.</h1>
+  <p class="sub">Шпаргалка · Всесвітня Історія</p>
+  <hr class="div">
+
+  <div class="top-bar">
+    <button class="top-btn" id="themeToggle">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+      <span>Темна тема</span>
+    </button>
+    <button class="top-btn" id="glossaryBtn">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+      <span>Словник термінів</span>
+    </button>
+  </div>
+
+  <div class="search-wrap">
+    <input class="search" id="search" type="text" placeholder="Пошук договору, країни чи терміну...">
+  </div>
+
+  <div class="tabs">
+    <button class="tab active" data-filter="all">Всі</button>
+    <button class="tab" data-filter="washington">Вашингтонська система</button>
+    <button class="tab" data-filter="locarno">Система Локарно</button>
+    <button class="tab" data-filter="favorites" id="tabFavorites">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      <span>Обране</span>
+      <span class="badge-count" id="favCount">0</span>
+    </button>
+  </div>
+
+  <div class="view-toggle">
+    <button class="vbtn active" id="vGrid">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+      <span>Картки</span>
+    </button>
+    <button class="vbtn" id="vLine">
+      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><circle cx="4" cy="6" r="1.5" fill="currentColor"/><circle cx="4" cy="12" r="1.5" fill="currentColor"/><circle cx="4" cy="18" r="1.5" fill="currentColor"/></svg>
+      <span>Хронологія</span>
+    </button>
+  </div>
+
+  <div class="ctrl-bar" id="ctrlBar">
+    <button class="ctrl-btn" id="expandAll">Розгорнути всі</button>
+    <button class="ctrl-btn" id="collapseAll">Згорнути всі</button>
+  </div>
+
+  <div id="gridView">
+
+    <div class="sec-label" data-section="washington">Вашингтонська система</div>
+    <div class="grid" id="gWashington">
+
+      <div class="card span3" id="card-washington" data-group="washington" data-keywords="вашингтон конференція 1921 1922 лінкори тихий океан китай 5 4 9 держав відкритих дверей">
+        <div class="card-head" style="--c:#7b9ea6">
+          <div class="card-title-wrap">
+            <div class="card-year" style="color:#7b9ea6">1921–1922</div>
+            <div class="card-title">Вашингтонська конференція</div>
+          </div>
+          <div class="card-actions">
+            <button class="action-btn copy-btn" title="Скопіювати тези" aria-label="Скопіювати тези">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+            <button class="action-btn star-btn" title="Додати до обраного" aria-label="Додати до обраного">
+              <svg width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <span class="toggle-icon">+</span>
+          </div>
+        </div>
+        <div class="card-preview">Обмеження морських озброєнь · Три договори · 9 держав</div>
+        <div class="card-body">
+          <div class="date-tag">12.11.1921 – 06.02.1922</div>
+          <div class="two-col">
+            <div class="mini-block">
+              <div class="mini-title">Договір 5 держав</div>
+              <ul class="facts"><li>Лінкори: <b>США:Брит:Яп:Фр:Іт = 5:5:3:1,75:1,75</b></li><li>Мораторій на 10 років</li></ul>
+            </div>
+            <div class="mini-block">
+              <div class="mini-title">Договір 4 держав</div>
+              <ul class="facts"><li>Визнання тихоокеанських володінь</li><li>Замінив англо-японський союз</li></ul>
+            </div>
+            <div class="mini-block">
+              <div class="mini-title">Договір 9 держав (Китай)</div>
+              <ul class="facts"><li>Принцип <b>«відкритих дверей»</b></li><li>Суверенітет і цілісність Китаю</li></ul>
+            </div>
+            <div class="mini-block">
+              <div class="mini-title">Учасники</div>
+              <div class="chips" style="margin:0">
+                <span class="chip"><svg class="flag-icon" viewBox="0 0 24 16" width="15" height="10"><rect width="24" height="16" rx="2" fill="#b22234"/><path d="M0 2.46h24M0 4.92h24M0 7.38h24M0 9.85h24M0 12.31h24M0 14.77h24" stroke="#fff" stroke-width="1.23"/><rect width="10" height="8.6" rx="1" fill="#3c3b6e"/><circle cx="5" cy="4.3" r="2.2" fill="#fff"/></svg>США</span>
+                <span class="chip"><svg class="flag-icon" viewBox="0 0 24 16" width="15" height="10"><rect width="24" height="16" rx="2" fill="#012169"/><path d="M0 0l24 16M24 0L0 16" stroke="#fff" stroke-width="2.5"/><path d="M0 0l24 16M24 0L0 16" stroke="#c8102e" stroke-width="1.5"/><path d="M12 0v16M0 8h24" stroke="#fff" stroke-width="4.5"/><path d="M12 0v16M0 8h24" stroke="#c8102e" stroke-width="2.5"/></svg>Британія</span>
+                <span class="chip"><svg class="flag-icon" viewBox="0 0 24 16" width="15" height="10"><rect width="24" height="16" rx="2" fill="#fff" stroke="#e0dcd0" stroke-width="0.5"/><circle cx="12" cy="8" r="4.5" fill="#bc002d"/></svg>Японія</span>
+                <span class="chip"><svg class="flag-icon" viewBox="0 0 24 16" width="15" height="10"><rect width="8" height="16" rx="1 0 0 1" fill="#002395"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" rx="0 1 1 0" fill="#ed2939"/></svg>Франція</span>
+                <span class="chip"><svg class="flag-icon" viewBox="0 0 24 16" width="15" height="10"><rect width="8" height="16" rx="1 0 0 1" fill="#009246"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" rx="0 1 1 0" fill="#ce2b37"/></svg>Італія</span>
+                <span class="chip"><svg class="flag-icon" viewBox="0 0 24 16" width="15" height="10"><rect width="24" height="16" rx="2" fill="#de2910"/><polygon points="4.5,2 5.2,4.2 7.5,4.2 5.6,5.6 6.3,7.8 4.5,6.4 2.7,7.8 3.4,5.6 1.5,4.2 3.8,4.2" fill="#ffde00"/></svg>Китай</span>
+              </div>
+            </div>
+          </div>
+          <div class="sig" style="--c:#7b9ea6"><span class="sig-label">Значущість</span><div class="sig-bar"><div class="sig-fill" data-val="78"></div></div><span class="sig-n">78%</span></div>
+        </div>
+      </div>
+
+      <div class="card span2" id="card-rapallo" data-group="washington" data-keywords="рапалло рапальський договір росія німеччина 1922 репарації визнання таємно">
+        <div class="card-head" style="--c:#9a8060">
+          <div class="card-title-wrap">
+            <div class="card-year" style="color:#9a8060">1922</div>
+            <div class="card-title">Рапальський договір</div>
+          </div>
+          <div class="card-actions">
+            <button class="action-btn copy-btn" title="Скопіювати тези" aria-label="Скопіювати тези">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+            <button class="action-btn star-btn" title="Додати до обраного" aria-label="Додати до обраного">
+              <svg width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <span class="toggle-icon">+</span>
+          </div>
+        </div>
+        <div class="card-preview">Росія + Німеччина · Взаємна відмова від претензій</div>
+        <div class="card-body">
+          <div class="date-tag">16 квітня 1922</div>
+          <ul class="facts">
+            <li><b>Сторони:</b> Радянська Росія та Веймарська Німеччина</li>
+            <li>Взаємна відмова від претензій і репарацій</li>
+            <li>Дипломатичне визнання РСФРР де-факто</li>
+            <li>Режим найбільшого сприяння у торгівлі</li>
+            <li><b>Таємно:</b> військово-технічна співпраця в обхід Версаля</li>
+          </ul>
+          <div class="note" style="--c:#9a8060">Перший прорив ізоляції двох «держав-вигнанців» після Першої світової війни</div>
+          <div class="sig" style="--c:#9a8060"><span class="sig-label">Значущість</span><div class="sig-bar"><div class="sig-fill" data-val="88"></div></div><span class="sig-n">88%</span></div>
+        </div>
+      </div>
+
+      <div class="card" id="card-genoa" data-group="washington" data-keywords="генуя генуезька конференція 1922 борги царські 34 держави">
+        <div class="card-head" style="--c:#b07d6a">
+          <div class="card-title-wrap">
+            <div class="card-year" style="color:#b07d6a">1922</div>
+            <div class="card-title">Генуезька конференція</div>
+          </div>
+          <div class="card-actions">
+            <button class="action-btn copy-btn" title="Скопіювати тези" aria-label="Скопіювати тези">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+            <button class="action-btn star-btn" title="Додати до обраного" aria-label="Додати до обраного">
+              <svg width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <span class="toggle-icon">+</span>
+          </div>
+        </div>
+        <div class="card-preview">34 держави · Без угоди · Поклала початок Рапалло</div>
+        <div class="card-body">
+          <div class="date-tag">Квітень – Травень 1922</div>
+          <ul class="facts">
+            <li><b>34 держави</b> — найбільша конференція після Версаля</li>
+            <li>Перша міжнародна участь Радянської Росії</li>
+            <li>Головне питання: борги царського уряду</li>
+            <li>Завершилася без підписання загальної угоди</li>
+            <li>Призвела до підписання <b>Рапальського договору</b></li>
+          </ul>
+          <div class="sig" style="--c:#b07d6a"><span class="sig-label">Значущість</span><div class="sig-bar"><div class="sig-fill" data-val="55"></div></div><span class="sig-n">55%</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="sec-label" data-section="locarno">Система Локарно</div>
+    <div class="grid" id="gLocarno">
+
+      <div class="card" id="card-dawes" data-group="locarno" data-keywords="дауес план репарації рур 1924 сша рейхсмарка">
+        <div class="card-head" style="--c:#8a9e75">
+          <div class="card-title-wrap">
+            <div class="card-year" style="color:#8a9e75">1924</div>
+            <div class="card-title">План Дауеса</div>
+          </div>
+          <div class="card-actions">
+            <button class="action-btn copy-btn" title="Скопіювати тези" aria-label="Скопіювати тези">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+            <button class="action-btn star-btn" title="Додати до обраного" aria-label="Додати до обраного">
+              <svg width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <span class="toggle-icon">+</span>
+          </div>
+        </div>
+        <div class="card-preview">Реструктуризація репарацій · 800 млн марок/рік</div>
+        <div class="card-body">
+          <div class="date-tag">16 серпня 1924</div>
+          <ul class="facts">
+            <li>Реструктуризація виплат після <b>Рурської кризи</b></li>
+            <li>Перший рік виплат — <b>800 млн марок</b></li>
+            <li>Американські позики для відновлення: ~<b>800 млн $</b></li>
+            <li>Виведення французько-бельгійських військ з Руру</li>
+            <li>Стабілізація <b>рейхсмарки</b> · Старт «Золотих двадцятих»</li>
+          </ul>
+          <div class="sig" style="--c:#8a9e75"><span class="sig-label">Значущість</span><div class="sig-bar"><div class="sig-fill" data-val="82"></div></div><span class="sig-n">82%</span></div>
+        </div>
+      </div>
+
+      <div class="card span2" id="card-locarno" data-group="locarno" data-keywords="локарно договори 1925 кордони рейн франція бельгія польща дух ліга націй">
+        <div class="card-head" style="--c:#c4a97d">
+          <div class="card-title-wrap">
+            <div class="card-year" style="color:#c4a97d">1925</div>
+            <div class="card-title">Локарнські договори</div>
+          </div>
+          <div class="card-actions">
+            <button class="action-btn copy-btn" title="Скопіювати тези" aria-label="Скопіювати тези">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+            <button class="action-btn star-btn" title="Додати до обраного" aria-label="Додати до обраного">
+              <svg width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <span class="toggle-icon">+</span>
+          </div>
+        </div>
+        <div class="card-preview">Рейнський пакт · «Дух Локарно» · Ліга Націй</div>
+        <div class="card-body">
+          <div class="date-tag">5–16 жовтня 1925 · Локарно, Швейцарія</div>
+          <ul class="facts">
+            <li><b>Рейнський гарантійний пакт:</b> непорушність західних кордонів; гаранти — Британія й Італія</li>
+            <li>Арбітражні договори з Францією, Бельгією, Польщею та Чехословаччиною</li>
+            <li>Німеччина визнала лише <b>західні</b> кордони, відмовившись визнавати східні</li>
+            <li>«<b>Дух Локарно</b>» — ера примирення; шлях Німеччини до Ліги Націй (1926)</li>
+          </ul>
+          <div class="chips">
+            <span class="chip"><svg class="flag-icon" viewBox="0 0 24 16" width="15" height="10"><rect width="24" height="5.33" rx="1 1 0 0" fill="#000"/><rect y="5.33" width="24" height="5.33" fill="#dd0000"/><rect y="10.66" width="24" height="5.33" rx="0 0 1 1" fill="#ffce00"/></svg>Німеччина</span>
+            <span class="chip"><svg class="flag-icon" viewBox="0 0 24 16" width="15" height="10"><rect width="8" height="16" rx="1 0 0 1" fill="#002395"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" rx="0 1 1 0" fill="#ed2939"/></svg>Франція</span>
+            <span class="chip"><svg class="flag-icon" viewBox="0 0 24 16" width="15" height="10"><rect width="8" height="16" rx="1 0 0 1" fill="#000"/><rect x="8" width="8" height="16" fill="#ffd90c"/><rect x="16" width="8" height="16" rx="0 1 1 0" fill="#f31830"/></svg>Бельгія</span>
+            <span class="chip"><svg class="flag-icon" viewBox="0 0 24 16" width="15" height="10"><rect width="24" height="16" rx="2" fill="#012169"/><path d="M0 0l24 16M24 0L0 16" stroke="#fff" stroke-width="2.5"/><path d="M0 0l24 16M24 0L0 16" stroke="#c8102e" stroke-width="1.5"/><path d="M12 0v16M0 8h24" stroke="#fff" stroke-width="4.5"/><path d="M12 0v16M0 8h24" stroke="#c8102e" stroke-width="2.5"/></svg>Британія</span>
+            <span class="chip"><svg class="flag-icon" viewBox="0 0 24 16" width="15" height="10"><rect width="8" height="16" rx="1 0 0 1" fill="#009246"/><rect x="8" width="8" height="16" fill="#fff"/><rect x="16" width="8" height="16" rx="0 1 1 0" fill="#ce2b37"/></svg>Італія</span>
+            <span class="chip"><svg class="flag-icon" viewBox="0 0 24 16" width="15" height="10"><rect width="24" height="8" rx="1 1 0 0" fill="#fff" stroke="#e0dcd0" stroke-width="0.3"/><rect y="8" width="24" height="8" rx="0 0 1 1" fill="#dc143c"/></svg>Польща</span>
+            <span class="chip"><svg class="flag-icon" viewBox="0 0 24 16" width="15" height="10"><rect width="24" height="8" rx="1 1 0 0" fill="#fff"/><rect y="8" width="24" height="8" rx="0 0 1 1" fill="#d7141a"/><polygon points="0,0 12,8 0,16" fill="#11457e"/></svg>Чехословаччина</span>
+          </div>
+          <div class="sig" style="--c:#c4a97d"><span class="sig-label">Значущість</span><div class="sig-bar"><div class="sig-fill" data-val="95"></div></div><span class="sig-n">95%</span></div>
+        </div>
+      </div>
+
+      <div class="card" id="card-berlin" data-group="locarno" data-keywords="берлін берлінський договір німеччина срср 1926 нейтралітет рапалло">
+        <div class="card-head" style="--c:#7a8fa6">
+          <div class="card-title-wrap">
+            <div class="card-year" style="color:#7a8fa6">1926</div>
+            <div class="card-title">Берлінський договір</div>
+          </div>
+          <div class="card-actions">
+            <button class="action-btn copy-btn" title="Скопіювати тези" aria-label="Скопіювати тези">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+            <button class="action-btn star-btn" title="Додати до обраного" aria-label="Додати до обраного">
+              <svg width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <span class="toggle-icon">+</span>
+          </div>
+        </div>
+        <div class="card-preview">Німеччина + СРСР · Нейтралітет · Продовження Рапалло</div>
+        <div class="card-body">
+          <div class="date-tag">24 квітня 1926</div>
+          <ul class="facts">
+            <li><b>Сторони:</b> Німеччина та СРСР</li>
+            <li>Взаємний нейтралітет у разі нападу третьої сторони</li>
+            <li>Політичне та економічне продовження Рапалло</li>
+            <li>Відповідь СРСР на дипломатичну ізоляцію після Локарно</li>
+            <li>Пролонговано у <b>1931</b> та <b>1933</b> роках</li>
+          </ul>
+          <div class="sig" style="--c:#7a8fa6"><span class="sig-label">Значущість</span><div class="sig-bar"><div class="sig-fill" data-val="70"></div></div><span class="sig-n">70%</span></div>
+        </div>
+      </div>
+
+      <div class="card span2" id="card-briand" data-group="locarno" data-keywords="бріан келлог пакт 1928 париж відмова від війни паризький 62 держави">
+        <div class="card-head" style="--c:#6b8c6b">
+          <div class="card-title-wrap">
+            <div class="card-year" style="color:#6b8c6b">1928</div>
+            <div class="card-title">Пакт Бріана – Келлога</div>
+          </div>
+          <div class="card-actions">
+            <button class="action-btn copy-btn" title="Скопіювати тези" aria-label="Скопіювати тези">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+            <button class="action-btn star-btn" title="Додати до обраного" aria-label="Додати до обраного">
+              <svg width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <span class="toggle-icon">+</span>
+          </div>
+        </div>
+        <div class="card-preview">Відмова від війни · 62 держави · Паризький пакт</div>
+        <div class="card-body">
+          <div class="date-tag">27 серпня 1928 · Париж</div>
+          <div class="two-col">
+            <ul class="facts">
+              <li>Відмова від <b>війни як знаряддя</b> нацполітики</li>
+              <li>Вирішення спорів виключно мирними засобами</li>
+              <li>Підписали <b>62 держави світу</b></li>
+            </ul>
+            <ul class="facts">
+              <li>Відсутній будь-який механізм примусу чи санкцій</li>
+              <li>Не забороняв так звані «оборонні» війни</li>
+              <li>Порушений Японією (1931), Італією (1935), Німеччиною (1939)</li>
+            </ul>
+          </div>
+          <div class="note" style="--c:#6b8c6b">«...засуджують звернення до війни і відмовляються від неї як від знаряддя національної політики»</div>
+          <div class="sig" style="--c:#6b8c6b;margin-top:10px"><span class="sig-label">Значущість</span><div class="sig-bar"><div class="sig-fill" data-val="90"></div></div><span class="sig-n">90%</span></div>
+        </div>
+      </div>
+
+      <div class="card" id="card-young" data-group="locarno" data-keywords="юнг план 1929 репарації бмр банк розрахунків рейнська зона">
+        <div class="card-head" style="--c:#b09060">
+          <div class="card-title-wrap">
+            <div class="card-year" style="color:#b09060">1929</div>
+            <div class="card-title">План Юнга</div>
+          </div>
+          <div class="card-actions">
+            <button class="action-btn copy-btn" title="Скопіювати тези" aria-label="Скопіювати тези">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            </button>
+            <button class="action-btn star-btn" title="Додати до обраного" aria-label="Додати до обраного">
+              <svg width="14" height="14" viewBox="0 0 24 24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+            </button>
+            <span class="toggle-icon">+</span>
+          </div>
+        </div>
+        <div class="card-preview">112 млрд марок · 59 років · Банк розрахунків</div>
+        <div class="card-body">
+          <div class="date-tag">7 червня 1929</div>
+          <ul class="facts">
+            <li>Прийшов на зміну плану Дауеса</li>
+            <li>Репарації скорочено до <b>112 млрд марок</b> на 59 років</li>
+            <li>Щорічні виплати — приблизно <b>2 млрд марок</b></li>
+            <li>Створено <b>Банк міжнародних розрахунків (БМР)</b> у Базелі</li>
+            <li>Дострокове виведення окупаційних військ з <b>Рейнської зони</b> (до 1930)</li>
+          </ul>
+          <div class="sig" style="--c:#b09060"><span class="sig-label">Значущість</span><div class="sig-bar"><div class="sig-fill" data-val="75"></div></div><span class="sig-n">75%</span></div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="no-results" id="noResults">
+      <span>Нічого не знайдено</span>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+    </div>
+
+  </div>
+
+  <div id="timelineView" style="display:none">
+    <div class="timeline show" id="tlList">
+      <div class="tl-item" style="--c:#7b9ea6"><div class="tl-year" style="color:#7b9ea6">1921–1922</div><div class="tl-name">Вашингтонська конференція</div><div class="tl-desc">Три договори: 5 держав (співвідношення лінкорів 5:5:3), 4 держав (Тихий океан), 9 держав (Китай, принцип відкритих дверей).</div></div>
+      <div class="tl-item" style="--c:#b07d6a"><div class="tl-year" style="color:#b07d6a">Квітень 1922</div><div class="tl-name">Генуезька конференція</div><div class="tl-desc">34 держави, перша міжнародна участь Радянської Росії. Питання боргів, завершилась без підсумкової угоди.</div></div>
+      <div class="tl-item" style="--c:#9a8060"><div class="tl-year" style="color:#9a8060">16 квітня 1922</div><div class="tl-name">Рапальський договір</div><div class="tl-desc">Радянська Росія + Німеччина. Взаємна відмова від претензій, дипломатичне визнання, таємна військова співпраця.</div></div>
+      <div class="tl-item" style="--c:#8a9e75"><div class="tl-year" style="color:#8a9e75">16 серпня 1924</div><div class="tl-name">План Дауеса</div><div class="tl-desc">Реструктуризація репарацій після Рурської кризи. Позики США, стабілізація рейхсмарки, виведення військ з Руру.</div></div>
+      <div class="tl-item" style="--c:#c4a97d"><div class="tl-year" style="color:#c4a97d">Жовтень 1925</div><div class="tl-name">Локарнські договори</div><div class="tl-desc">Рейнський пакт про непорушність західних кордонів. «Дух Локарно». Вступ Німеччини до Ліги Націй у 1926 р.</div></div>
+      <div class="tl-item" style="--c:#7a8fa6"><div class="tl-year" style="color:#7a8fa6">24 квітня 1926</div><div class="tl-name">Берлінський договір</div><div class="tl-desc">Німеччина + СРСР. Договір про нейтралітет та ненапад, продовження лінії Рапалло.</div></div>
+      <div class="tl-item" style="--c:#6b8c6b"><div class="tl-year" style="color:#6b8c6b">27 серпня 1928</div><div class="tl-name">Пакт Бріана – Келлога</div><div class="tl-desc">Паризький пакт 62 держав про відмову від війни як знаряддя нацполітики. Відсутність санкцій.</div></div>
+      <div class="tl-item" style="--c:#b09060"><div class="tl-year" style="color:#b09060">7 червня 1929</div><div class="tl-name">План Юнга</div><div class="tl-desc">Скорочення репарацій до 112 млрд марок на 59 років. Створення БМР, евакуація військ із Рейнської зони.</div></div>
+    </div>
+  </div>
+
+  <div class="modal-overlay" id="glossaryModal">
+    <div class="modal">
+      <div class="modal-header">
+        <h2 class="modal-title">Словник історичних термінів</h2>
+        <button class="modal-close" id="glossaryClose" aria-label="Закрити">&times;</button>
+      </div>
+      <div class="modal-content">
+        <div class="glossary-item">
+          <div class="glossary-term">Принцип «відкритих дверей»</div>
+          <div class="glossary-def">Рівне право для торгівлі та промислової діяльності всіх держав на усій території Китаю без створення відокремлених сфер впливу (закріплено у Договорі 9 держав 1922 р.).</div>
+        </div>
+        <div class="glossary-item">
+          <div class="glossary-term">Мораторій</div>
+          <div class="glossary-def">Тимчасове відтермінування або призупинення виконання зобов'язань. У Вашингтонському договорі 5 держав — 10-річний мораторій на будівництво нових великих лінкорів.</div>
+        </div>
+        <div class="glossary-item">
+          <div class="glossary-term">Режим найбільшого сприяння</div>
+          <div class="glossary-def">Принцип зовнішньої торгівлі, згідно з яким держава-партнер автоматично отримує не менш вигідні митні й торгові умови, ніж будь-яка інша третя держава (Рапалло 1922).</div>
+        </div>
+        <div class="glossary-item">
+          <div class="glossary-term">Рейнський гарантійний пакт</div>
+          <div class="glossary-def">Головна угода Локарно (1925), що затвердила непорушність кордонів між Німеччиною, Францією та Бельгією під гарантії Великої Британії й Італії.</div>
+        </div>
+        <div class="glossary-item">
+          <div class="glossary-term">«Дух Локарно»</div>
+          <div class="glossary-def">Політична концепція взаємного компромісу, примирення переможців і переможених Першої світової війни та колективної безпеки в Європі у 1925–1929 рр.</div>
+        </div>
+        <div class="glossary-item">
+          <div class="glossary-term">Банк міжнародних розрахунків (БМР)</div>
+          <div class="glossary-def">Міжнародна фінансова установа, заснована за планом Юнга (1929–1930) у швейцарському Базелі для обслуговування репараційних розрахунків та координації центробанків.</div>
+        </div>
+        <div class="glossary-item">
+          <div class="glossary-term">Пакт Бріана — Келлога</div>
+          <div class="glossary-def">Міжнародний договір 1928 року, яким 62 держави урочисто проголосили відмову від війни як засобу національної політики, проте без механізму військових санкцій.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast"></div>
+
+  <p style="text-align:center;margin-top:32px;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--muted)">
+    Всесвітня Історія · 10–11 клас · 1921–1929
+  </p>
+</div>
+
+<script>
+let favorites = JSON.parse(localStorage.getItem('shpar_favs') || '[]');
+
+function saveFavorites(){
+  localStorage.setItem('shpar_favs', JSON.stringify(favorites));
+  updateFavoritesUI();
+}
+
+function updateFavoritesUI(){
+  document.getElementById('favCount').textContent = favorites.length;
+  document.querySelectorAll('.card[id]').forEach(card=>{
+    const id = card.id;
+    const starBtn = card.querySelector('.star-btn');
+    if(!starBtn) return;
+    if(favorites.includes(id)){
+      starBtn.classList.add('starred');
+      starBtn.title = 'Видалити з обраного';
+    }else{
+      starBtn.classList.remove('starred');
+      starBtn.title = 'Додати до обраного';
+    }
+  });
+}
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  setTimeout(()=>{ t.classList.remove('show'); }, 1800);
+}
+
+const themeToggle = document.getElementById('themeToggle');
+function renderThemeBtn(isDark){
+  if(isDark){
+    themeToggle.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><span>Світла тема</span>';
+  }else{
+    themeToggle.innerHTML = '<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg><span>Темна тема</span>';
+  }
+}
+
+const savedTheme = localStorage.getItem('shpar_theme') || 'light';
+if(savedTheme === 'dark'){
+  document.documentElement.setAttribute('data-theme', 'dark');
+  renderThemeBtn(true);
+}else{
+  renderThemeBtn(false);
+}
+
+themeToggle.addEventListener('click', ()=>{
+  const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+  if(isDark){
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('shpar_theme', 'light');
+    renderThemeBtn(false);
+  }else{
+    document.documentElement.setAttribute('data-theme', 'dark');
+    localStorage.setItem('shpar_theme', 'dark');
+    renderThemeBtn(true);
+  }
+});
+
+const glossaryModal = document.getElementById('glossaryModal');
+document.getElementById('glossaryBtn').addEventListener('click', ()=>{
+  glossaryModal.classList.add('open');
+});
+document.getElementById('glossaryClose').addEventListener('click', ()=>{
+  glossaryModal.classList.remove('open');
+});
+glossaryModal.addEventListener('click', (e)=>{
+  if(e.target === glossaryModal) glossaryModal.classList.remove('open');
+});
+
+document.querySelectorAll('.tab').forEach(t=>{
+  t.addEventListener('click', function(){
+    document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
+    this.classList.add('active');
+    const f = this.dataset.filter;
+    const sq = document.getElementById('search').value.toLowerCase();
+    filterCards(f, sq);
+    document.querySelectorAll('[data-section]').forEach(s=>{
+      const sec = s.dataset.section;
+      if(f==='all' || f===sec) s.style.display='';
+      else s.style.display='none';
+    });
+  });
+});
+
+document.getElementById('search').addEventListener('input', function(){
+  const f = document.querySelector('.tab.active').dataset.filter;
+  filterCards(f, this.value.toLowerCase());
+});
+
+function filterCards(group, q){
+  let visible = 0;
+  document.querySelectorAll('.card[data-group]').forEach(c=>{
+    const isFav = favorites.includes(c.id);
+    let gMatch = false;
+    if(group === 'all') gMatch = true;
+    else if(group === 'favorites') gMatch = isFav;
+    else gMatch = (c.dataset.group === group);
+
+    const kw = (c.dataset.keywords + ' ' + c.querySelector('.card-title').textContent).toLowerCase();
+    const qMatch = !q || kw.includes(q);
+
+    if(gMatch && qMatch){
+      c.classList.remove('hidden');
+      visible++;
+    }else{
+      c.classList.add('hidden');
+    }
+  });
+  document.getElementById('noResults').style.display = visible === 0 ? 'block' : 'none';
+}
+
+function animateBars(card){
+  card.querySelectorAll('.sig-fill').forEach(f=>{
+    const v = f.dataset.val;
+    setTimeout(()=>{ f.style.width = v + '%'; }, 40);
+  });
+}
+
+function toggleCard(card){
+  card.classList.toggle('open');
+  if(card.classList.contains('open')) animateBars(card);
+}
+
+document.querySelectorAll('.card[data-group]').forEach(card=>{
+  const head = card.querySelector('.card-head');
+  const preview = card.querySelector('.card-preview');
+
+  head.addEventListener('click', (e)=>{
+    if(e.target.closest('.action-btn')) return;
+    toggleCard(card);
+  });
+
+  if(preview){
+    preview.addEventListener('click', ()=>toggleCard(card));
+  }
+
+  const star = card.querySelector('.star-btn');
+  if(star){
+    star.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      const id = card.id;
+      if(favorites.includes(id)){
+        favorites = favorites.filter(x => x !== id);
+        showToast('Видалено з обраного');
+      }else{
+        favorites.push(id);
+        showToast('Додано в обране');
+      }
+      saveFavorites();
+      const activeFilter = document.querySelector('.tab.active').dataset.filter;
+      if(activeFilter === 'favorites'){
+        filterCards('favorites', document.getElementById('search').value.toLowerCase());
+      }
+    });
+  }
+
+  const copy = card.querySelector('.copy-btn');
+  if(copy){
+    copy.addEventListener('click', (e)=>{
+      e.stopPropagation();
+      const title = card.querySelector('.card-title').textContent.trim();
+      const year = card.querySelector('.card-year').textContent.trim();
+      const facts = Array.from(card.querySelectorAll('ul.facts li')).map(li => '• ' + li.textContent.trim()).join('\n');
+      const text = `${title} (${year})\n${facts}`;
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(text).then(()=>showToast('Скопійовано в буфер!'));
+      }else{
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        document.body.appendChild(ta);
+        ta.select();
+        document.execCommand('copy');
+        document.body.removeChild(ta);
+        showToast('Скопійовано в буфер!');
+      }
+    });
+  }
+});
+
+document.getElementById('expandAll').addEventListener('click', ()=>{
+  document.querySelectorAll('.card[data-group]:not(.hidden)').forEach(c=>{
+    c.classList.add('open');
+    animateBars(c);
+  });
+});
+
+document.getElementById('collapseAll').addEventListener('click', ()=>{
+  document.querySelectorAll('.card[data-group]').forEach(c=>c.classList.remove('open'));
+});
+
+document.getElementById('vGrid').addEventListener('click', function(){
+  this.classList.add('active');
+  document.getElementById('vLine').classList.remove('active');
+  document.getElementById('gridView').style.display = '';
+  document.getElementById('timelineView').style.display = 'none';
+  document.getElementById('ctrlBar').style.display = '';
+});
+
+document.getElementById('vLine').addEventListener('click', function(){
+  this.classList.add('active');
+  document.getElementById('vGrid').classList.remove('active');
+  document.getElementById('gridView').style.display = 'none';
+  document.getElementById('timelineView').style.display = '';
+  document.getElementById('ctrlBar').style.display = 'none';
+});
+
+updateFavoritesUI();
+</script>
+</body>
+</html>
